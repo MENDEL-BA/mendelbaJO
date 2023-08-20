@@ -1,3 +1,6 @@
-<h2>Olympic games app</h2>
-<hr />
-<p>{{ (olympics$ | async)?.length }} data loaded</p>
+<button class="item-list block" >Medals per Country </button>
+<div class="container">
+    <button class="item-jo box" ><p style="color: black;">Number of JOs {{ (olympics$ | async)?.length }} </p></button>
+    <button class="item-jo box" ><p style="color: black;">Number of Countries {{ (olympics$ | async)?.length }} </p></button>
+</div>
+<div  id="pieChart"></div>

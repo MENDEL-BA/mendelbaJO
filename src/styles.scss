@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crée deux colonnes avec largeur égale */
+    gap: 50px; /* Ajoute un espacement entre les boxs */
+    margin-left: 350px;
+  }
+  
+    
+.item-jo{
+   // margin-left: 400px;
+    margin-top: 40px;
+    //padding: 6px 12px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    border: 3px solid ;
+    border-radius: 7px;
+} 
+
+.box{
+    display: block;
+    color: #0e7071;
+    width: 30%;
+    background-color: #fdfdfd;
+}
+
+.block {
+    display: block;
+    width: 25%;
+    background-color: #0e7071;
+}
+.item-list {
+    margin-left: 510px;
+    padding: 6px 12px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: lightyellow;
+}
