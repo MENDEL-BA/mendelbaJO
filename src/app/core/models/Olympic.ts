@@ -11,7 +11,6 @@ example of an olympic country:
 }
 */
 export interface Olympic {
-    map(arg0: (country: { country: any; participations: any[]; }) => { name: any; y: any; }): unknown;
     id: number;
     country: string;
     participations: Participation[];

@@ -16,11 +16,17 @@ export class DetailComponent implements OnInit {
 
   constructor(private router: ActivatedRoute , private olympicService: OlympicService) { }
   name? : string;
+  numberOfAthlete? : number;
+  numberOfMedals?: number;
+  numberOfEntries?: number;
   ngOnInit(): void {
     this.name = this.router.snapshot.params['name'];
     if (this.name) {
       this.olympicService.getCountryInfo(this.name).subscribe(info => {
         this.countryInfo = info;
+        this.numberOfEntries = this.countryInfo?.participations.length;
+        this.numberOfAthlete = this.countryInfo?.participations[0].athleteCount;
+        this.numberOfMedals = this.countryInfo?.participations[0].medalsCount;
         this.renderLineChart(this.countryInfo);
       });
     }    
