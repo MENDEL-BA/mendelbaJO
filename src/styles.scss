@@ -1,12 +1,11 @@
-
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Crée deux colonnes avec largeur égale */
-    gap: 50px; /* Ajoute un espacement entre les boxs */
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
     margin-left: 350px;
   }
-  
-    
+
+
 .item-jo{
    // margin-left: 400px;
     margin-top: 40px;

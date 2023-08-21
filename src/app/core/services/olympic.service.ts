@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Olympic } from '../models/Olympic';
-
 @Injectable({
   providedIn: 'root',
 })

@@ -24,7 +24,7 @@ export class DetailComponent implements OnInit {
         this.renderLineChart(this.countryInfo);
       });
     }    
-   
+
   }
 
   renderLineChart(countryInfo: Olympic | undefined): void {
@@ -53,7 +53,7 @@ export class DetailComponent implements OnInit {
       };
       Highcharts.chart('lineChart', chartOptions);
     }
-    
+
   }
 
 }

@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public olympics$: Observable<Olympic[]> = of();
+  public olympics$: Observable<any> = of(null);
 
   constructor(private olympicService: OlympicService, private router: Router) {}
 
   ngOnInit(): void {
     this.olympics$ = this.olympicService.getOlympics();
-    
+
     this.olympics$.subscribe(olympicsData => {
       this.renderPieChart(olympicsData);
     });
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       name: country.country,
       y: country.participations.reduce((totalMedals: any, participation: { medalsCount: any; }) => totalMedals + participation.medalsCount, 0)
     }));
-   
+
     const chartOptions: Highcharts.Options = {
       chart: {
         type: 'pie'
@@ -63,10 +63,8 @@ export class HomeComponent implements OnInit {
         data: chartData
       }]
     };
-    
+
     Highcharts.chart('pieChart', chartOptions);
   }
 
 }
-
-
