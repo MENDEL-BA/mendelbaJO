@@ -20,9 +20,11 @@ export class DetailComponent implements OnInit {
   numberOfMedals?: number;
   numberOfEntries?: number;
   ngOnInit(): void {
+    // Recuperation de la variable name sur l'url
     this.name = this.router.snapshot.params['name'];
     if (this.name) {
       this.olympicService.getCountryInfo(this.name).subscribe(info => {
+        //Recuperation des infos à afficher sur la page detail
         this.countryInfo = info;
         this.numberOfEntries = this.countryInfo?.participations.length;
         this.numberOfAthlete = this.countryInfo?.participations[0].athleteCount;
